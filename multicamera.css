@@ -1,0 +1,13 @@
+/* This code should already be in the dashboard, but here it is if you need it. */
+.camera {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 50vw;
+    overflow: hidden;
+    height: 80vh;
+}
+.camera img {
+    width: 50vw;
+    height: 80vh;
+}
