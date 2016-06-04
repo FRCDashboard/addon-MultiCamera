@@ -1,32 +1,29 @@
 // This should be added inside the definition of the 'ui' object at the starting of ui.js.
 
-        ,
-        camera: document.getElementById('camera')
+    ,
+    camera: document.getElementById('camera'),
+    cameraId: 0,
+    cameras: [ // Will default to first camera
+        'INSERT FIRST CAMERA STREAM SOURCE',
+        'INSERT SECOND CAMERA STREAM SOURCE',
+        'INSERT THIRD CAMERA STREAM SOURCE',
+        'INSERT FOURTH CAMERA STREAM SOURCE'
+    ]
 
 // End section
 
 
 
-// Copy this portion of the code into the large switch statement in the onValueChanged function. Then change the src's.
-
-        case '/SmartDashboard/useBackCamera':
-            if (value) {
-                ui.camera.src = 'INSERT HERE THE SOURCE OF YOUR BACK CAMERA';
-            } else {
-                ui.camera.src = 'INSERT HERE THE SOURCE OF YOUR FRONT OR MAIN CAMERA';
-            }
-            break;
-
-// End Section
+// Unlike most addons for FRC Dashboard, this addon doesn't interact with NetworkTables and is only client-side.
 
 
 
-// Add this at the bottom of ui.js with the other listeners.
+// Add this at the bottom of ui.js.
 
-// Toggle between camera views
+// Toggle between camera views.
 ui.camera.onclick = function() {
-    var cameraKey = '/SmartDashboard/Drive | backCamera';
-    NetworkTables.setValue(cameraKey, !NetworkTables.getValue(cameraKey));
+    if (ui.cameraId === ui.cameras.length) ui.cameraId = 0;
+    ui.camera.src = cameras[ui.cameraId];
 };
 
 // End section
