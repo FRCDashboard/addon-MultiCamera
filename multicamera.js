@@ -7,14 +7,15 @@
         'INSERT FIRST CAMERA STREAM SOURCE',
         'INSERT SECOND CAMERA STREAM SOURCE',
         'INSERT THIRD CAMERA STREAM SOURCE',
-        'INSERT FOURTH CAMERA STREAM SOURCE'
+        'INSERT FOURTH CAMERA STREAM SOURCE',
+        'ETC'
     ]
 
 // End section
 
 
 
-// Unlike most addons for FRC Dashboard, this addon doesn't interact with NetworkTables and is only client-side.
+// Unlike most addons, this addon doesn't interact with NetworkTables. Therefore, you don't need to add anything to the onValueChanged handler.
 
 
 
