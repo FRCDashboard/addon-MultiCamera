@@ -1,13 +1,12 @@
 /* This code should already be in the dashboard, but here it is if you need it. */
-.camera {
+#camera {
+    padding: 0;
     position: fixed;
     bottom: 0;
     left: 0;
     width: 50vw;
+    height: 80vh;
     overflow: hidden;
-    height: 80vh;
-}
-.camera img {
-    width: 50vw;
-    height: 80vh;
+    background-color: #333;
+    background-image: url('PUT PRIMARY SOURCE HERE');
 }
